@@ -1,5 +1,5 @@
 const myButton = document.getElementById("goBtn");
-const myResult = document.getElementById("displayResults");
+const myResult = document.getElementById("displayResult");
 
 myButton.addEventListener("click", function() {
   const pokemonName = document.getElementById(cardName).value;
