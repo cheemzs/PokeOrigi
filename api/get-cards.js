@@ -6,7 +6,7 @@ export default async function handler(request, response) {
   try {
     const apiResponse = await fetch(apiUrl, {
       headers: {
-        "Authorization": `Bearer: ${MY_API_KEY}`
+        "Authorization": `Bearer ${MY_API_KEY}`
       }
     });
     const data = await apiResponse.json();
