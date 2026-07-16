@@ -1,3 +1,7 @@
 input {
   background-color: blue;
 }
+
+.container {
+  background-color: black;
+}
