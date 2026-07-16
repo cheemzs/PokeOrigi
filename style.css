@@ -1,7 +1,20 @@
 input {
-  background-color: blue;
+  background-color: #3c5aa6;
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
 }
 
 .container {
   background-color: black;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+}
+
+body {
+  background-color: #fc2e4a;
+  color: #f0f0f0;
+  font-family: sans-serif;
 }
