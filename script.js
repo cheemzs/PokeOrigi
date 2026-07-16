@@ -43,7 +43,6 @@ myButton.addEventListener("click", async function() {
         </div>
       `;
     });
-    const myResult = document.getElementById("displayResult");
     myResult.innerHTML = htmlContent;
   } catch (error) {
                             console.error("Something went wrong, please try again.", error)
