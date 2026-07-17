@@ -1,5 +1,5 @@
 input {
-  width: calc(100% - 24px)
+  width: calc(100% - 24px);
   background-color: #0f111a;
   color: #ffffff;
   border: 1px solid #242b35;
@@ -27,6 +27,7 @@ body {
   align-items: center;
   display: flex;
   min-height: 100vh;
+  margin: 0px;
 }
 
 .goBtn {
