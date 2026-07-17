@@ -25,6 +25,7 @@ body {
   color: #f0f0f0;
   font-family: sans-serif;
   align-items: center;
+  display: flex;
 }
 
 .goBtn {
