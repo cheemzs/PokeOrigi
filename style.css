@@ -31,12 +31,23 @@ body {
   justify-content: center;
 }
 
-.goBtn {
-  background-color: #ffffff
+#goBtn {
+  background-color: #00e5bc;
+  color: #0b0e14;
+  padding: 30px;
+  width: 100%;
+  font-size: 1rem;
+  border: 1px solid #242b35;
+  border-radius: 12px;
+}
+
+#goBtn:hover {
+  background-color: #00c4a0;
+  box-shadow: 0 0 12px rgba(0, 229, 188, 0.4);
 }
 
 h1 {
-  font-size: 1.5rem;
+  font-size: 3rem;
   padding: 10px;
   color: #ffffff;
   margin-bottom: 25px;
