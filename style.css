@@ -32,13 +32,17 @@ body {
 }
 
 #goBtn {
-  background-color: #00e5bc;
-  color: #0b0e14;
-  padding: 30px;
   width: 100%;
+  background-color: #00e5bc; 
+  color: #0b0e14;
+  border: none;
+  border-radius: 10px;
+  padding: 12px;
   font-size: 1rem;
-  border: 1px solid #242b35;
-  border-radius: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: all 0.2s ease;
 }
 
 #goBtn:hover {
