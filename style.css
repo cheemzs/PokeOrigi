@@ -65,3 +65,82 @@ h1 {
 input:hover {
   box-shadow: 0 0 12px rgba(0, 229, 188, 0.4);
 }
+
+/* --- RESULTS CONTAINER STYLES --- */
+
+.results-header h2 {
+  font-size: 1.2rem;
+  color: #a0aec0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 25px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #242b35;
+  padding-bottom: 10px;
+}
+
+/* A flexible grid so if you fetch multiple cards, they look organized */
+.cards-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 12px; /* Spaces out the cards perfectly without text dashes */
+}
+
+/* The modern card panel block */
+.pokemon-card {
+  background-color: #0f111a; /* Deeper midnight block */
+  border: 1px solid #242b35;
+  border-radius: 8px;
+  padding: 16px;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.pokemon-card:hover {
+  border-color: #00e5bc; /* Border glows neon teal when hovered! */
+  transform: scale(1.01);  /* Pops out slightly */
+}
+
+/* Card Heading Styling */
+.card-title {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 12px;
+}
+
+/* Data Row layouts (Aligns labels on left, values on right) */
+.card-info-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 0;
+  font-size: 0.9rem;
+  border-bottom: 1px dashed rgba(36, 43, 53, 0.4);
+}
+
+.info-label {
+  color: #718096; /* Muted gray label color */
+}
+
+.info-value {
+  color: #e2e8f0; /* Crisp value font color */
+  font-weight: 500;
+}
+
+/* Highlighted styling variations */
+.badge {
+  background-color: #242b35;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+}
+
+.price-row {
+  border-bottom: none; /* Removes bottom line from final row */
+  margin-top: 4px;
+}
+
+.price-tag {
+  color: #00e5bc; /* Neon teal for price highlights */
+  font-weight: bold;
+  font-size: 1rem;
+}
