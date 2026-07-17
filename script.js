@@ -15,34 +15,51 @@ myButton.addEventListener("click", async function() {
     const cardresults = await fetch(searchUrl);
     const data = await cardresults.json();
     const cardsList = data.data||[];
+    // Start of the results section layout
     let htmlContent = `
-      <div style="text-align: center; font-family: monospace;">
-        <h3>========================================</h3>
-        <h3>Search Results</h3>
-        <h3>========================================</h3>
+      <div class="results-header">
+        <h2>Search Results</h2>
       </div>
+      <div class="cards-grid">
     `;
+
     cardsList.forEach(card => {
-      const cardName = card.name|| "Unknown";
-      const cardSetName = card.setName|| "Unknown";
-      const rarity = card.rarity|| "N.A";
-      const prices = card.prices|| {};
+      const cardName = card.name || "Unknown Name";
+      const cardSetName = card.setName || "Unknown Set";
+      const rarity = card.rarity || "N.A";
+      const prices = card.prices || {};
       const marketPrice = prices.market;
+      
       let price_display = "N.A";
       if (marketPrice) {
-        const final_price = marketPrice * USD_to_SGD
-        price_display = `$${final_price.toFixed(2)} SGD`
+        const final_price = marketPrice * USD_to_SGD;
+        price_display = `$${final_price.toFixed(2)} SGD`;
       }
+
+      // Modern UI Grid Card Component
       htmlContent += `
-        <div style="text-align: center; margin: 20px 0; font-family: monospace;">
-          <p><strong>Card:</strong> ${cardName}</p>
-          <p><strong>Set:</strong> ${cardSetName}</p>
-          <p><strong>Rarity:</strong> ${rarity}</p>
-          <p><strong>Price:</strong> ${price_display}</p>
-          <p>----------------------------------------</p>
+        <div class="pokemon-card">
+          <div class="card-title">${cardName}</div>
+          
+          <div class="card-info-row">
+            <span class="info-label">Set</span>
+            <span class="info-value">${cardSetName}</span>
+          </div>
+          
+          <div class="card-info-row">
+            <span class="info-label">Rarity</span>
+            <span class="info-value badge">${rarity}</span>
+          </div>
+          
+          <div class="card-info-row price-row">
+            <span class="info-label">Market Price</span>
+            <span class="info-value price-tag">${price_display}</span>
+          </div>
         </div>
       `;
     });
+
+    htmlContent += `</div>`; // Closes the cards-grid wrapper container
     myResult.innerHTML = htmlContent;
   } catch (error) {
                             console.error("Something went wrong, please try again.", error)
