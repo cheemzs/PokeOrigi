@@ -1,20 +1,40 @@
 input {
-  background-color: #2596be;
+  width: calc(100% - 24px)
+  background-color: #0f111a;
   color: #ffffff;
-  border: none;
+  border: 1px solid #242b35;
   border-radius: 10px;
   padding: 10px;
+  margin: 8px 0;
+  font-size: 0.95rem;
+  transition: border-color 0.2s ease;
 }
 
 .container {
-  background-color: black;
+  background-color: #151821;
+  border: 1px solid #242b35;
   border-radius: 12px;
   padding: 30px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+  width: 100%;
+  max-width: 420px;
 }
 
 body {
-  background-color: #002f8c;
+  background-color: #0b0e14;
   color: #f0f0f0;
   font-family: sans-serif;
+  align-items: center;
+}
+
+.goBtn {
+  background-color: #ffffff
+}
+
+h1 {
+  font-size: 1.5rem;
+  padding: 10px;
+  color: #ffffff;
+  margin-bottom: 25px;
+  text-align: center;
 }
