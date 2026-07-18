@@ -6,8 +6,9 @@ myButton.addEventListener("click", async function() {
     const pokemonName = document.getElementById("cardName").value;
     const setName = document.getElementById("setName").value;
     const languagechosen = document.getElementById("language").value;
+    const lowlang = languagechosen.ToLowerCase()
     myResult.innerHTML = "Searching Database...";
-    const searchUrl = `/api/get-cards?search=${encodeURIComponent(pokemonName)}&set=${encodeURIComponent(setName)}&language=${languagechosen}&limit=5`;
+    const searchUrl = `/api/get-cards?search=${encodeURIComponent(pokemonName)}&set=${encodeURIComponent(setName)}&language=${lowlang}&limit=5`;
     const currencyUrl = "https://v6.exchangerate-api.com/v6/9b52bd9f58a7572350a7fdc7/latest/USD";
     const exchange_data = await fetch(currencyUrl);
     const exchange_rate = await exchange_data.json();
@@ -54,7 +55,7 @@ myButton.addEventListener("click", async function() {
 
           <div class="card-info-row">
             <span class="info-label">Language</span>
-            <span class="info-value badge>${language}</span>
+            <span class="info-value language-thing>${language}</span>
           </div>
           
           <div class="card-info-row price-row">
