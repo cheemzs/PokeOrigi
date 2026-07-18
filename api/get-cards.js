@@ -2,7 +2,8 @@ export default async function handler(request, response) {
   const MY_API_KEY = process.env.POKEPRICE_API_KEY;
   const userSearch = request.query.search;
   const userSet = request.query.set;
-  const apiUrl = `https://www.pokemonpricetracker.com/api/v2/cards?search=${encodeURIComponent(userSearch)}&set=${encodeURIComponent(userSet)}&limit=5`;
+  const userLanguage = request.query.language;
+  const apiUrl = `https://www.pokemonpricetracker.com/api/v2/cards?search=${encodeURIComponent(userSearch)}&set=${encodeURIComponent(userSet)}&language=${userLanguage}&limit=5`;
   try {
     const apiResponse = await fetch(apiUrl, {
       headers: {
